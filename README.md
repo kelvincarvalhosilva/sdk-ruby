@@ -67,7 +67,7 @@ order_data = {
   }
 }
 
-result = sdk.payment.create(order_data, custom_request_options)
+result = sdk.order.create(order_data, custom_request_options)
 order = result[:response]
 
 puts order
