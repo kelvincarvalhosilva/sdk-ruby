@@ -7,7 +7,7 @@ module Mercadopago
 
   # From basic to advanced configurations, you control the whole experience.
 
-  # [Click here for more infos](https://www.mercadopago.com.br/developers/en/guides/online-payments/checkout-api/introduction/)
+  # [Click here for more infos](https://www.mercadopago.com/developers/en/docs/checkout-api/landing)
 
   class Order < MPBase
     def create(order_data, request_options: nil)
