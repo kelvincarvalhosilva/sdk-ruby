@@ -37,7 +37,6 @@ class TestOrder < Minitest::Test
     assert_equal 201, result[:status]
 
     result_transaction = sdk.order_transaction.create(order_created['id'], order_transaction_data)
-    puts result_transaction
     assert_equal 201, result_transaction[:status]
   end
 end
