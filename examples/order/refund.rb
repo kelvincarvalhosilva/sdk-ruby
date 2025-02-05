@@ -3,7 +3,7 @@ require_relative '../../lib/mercadopago'
 
 sdk = Mercadopago::SDK.new('<ACCESS_TOKEN>')
 
-def process_order(sdk)
+def refund_order(sdk)
 
   order_id = '<ORDER_ID>'
 
@@ -26,4 +26,4 @@ rescue StandardError => e
   puts e.message
 end
 
-process_order(sdk)
+refund_order(sdk)
