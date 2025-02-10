@@ -32,7 +32,7 @@ class TestOrder < Minitest::Test
     sdk = Mercadopago::SDK.new(ENV['ACCESS_TOKEN'])
     card_token_object = {
       card_number: '5031433215406351',
-      expiration_year: 2025,
+      expiration_year: 2030,
       expiration_month: 11,
       security_code: '123',
       cardholder: {
@@ -151,15 +151,7 @@ class TestOrder < Minitest::Test
 
   def test_cancel_order
     sdk = Mercadopago::SDK.new(ENV['ACCESS_TOKEN'])
-    card_token_object = {
-      card_number: '5031433215406351',
-      expiration_year: 2025,
-      expiration_month: 11,
-      security_code: '123',
-      cardholder: {
-        name: 'APRO'
-      }
-    }
+    card_token_object = create_card_token_request
     result_card_token = sdk.card_token.create(card_token_object)
     order_request = {
       type: 'online',
@@ -196,7 +188,7 @@ class TestOrder < Minitest::Test
     sdk = Mercadopago::SDK.new(ENV['ACCESS_TOKEN'])
     card_token_object = {
       card_number: '5031433215406351',
-      expiration_year: 2025,
+      expiration_year: 2030,
       expiration_month: 11,
       security_code: '123',
       cardholder: {
@@ -262,7 +254,7 @@ class TestOrder < Minitest::Test
   def create_card_token_request
     {
       card_number: '5031433215406351',
-      expiration_year: 2025,
+      expiration_year: 2030,
       expiration_month: 11,
       security_code: '123',
       cardholder: {
